@@ -1,0 +1,283 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#app {
+    position: relative;
+    background: var(--secondary-color);
+}
+
+#wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+    height: 100%;
+}
+
+#header {
+    position: fixed;
+    padding: 46px;
+    background: var(--primary-color);
+    width: var(--header-width);
+    height: 100%;
+    z-index: 10;
+}
+
+.avatar {
+    width: 100%;
+}
+
+.avatar img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.name {
+    margin: 15px 0;
+    color: var(--white-color);
+}
+
+.name-info {
+    font-size: 3.0rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0 5px;
+    line-height: 30px;
+}
+
+.name-job {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.social-list-item-link {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.social-list-item-link i {
+    font-size: 1.6rem;
+}
+
+.nav-bar {
+    list-style: none;
+}
+
+.nav-bar-item {
+    padding-bottom: 10px;
+}
+
+.nav-bar-item:hover {
+    animation: growUp linear .3s forwards;
+    will-change: transform;
+}
+
+.nav-bar-item-link {
+    color: var(--white-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    position: relative;
+}
+
+/* Content */
+
+#content {
+    position: relative;
+    left: var(--header-width);
+    width: 740px;
+    background-color: #fff;
+}
+
+#about-me, 
+#experience,
+#education,
+#works,
+#contact  {
+    padding: 60px 70px;
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.about-me-header, 
+.experience-header, 
+.education-header,
+.works-header,
+.contact-header {
+    color: var(--header-color);
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 40px;
+    position: relative;
+}
+
+.about-me-intro-description {
+    text-align: justify;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 26px;
+    font-weight: 500;
+    margin: 0 0 40px;
+}
+
+.intro-description-list {
+    list-style: none;
+}
+
+.intro-description-item {
+    font-size: 1.4rem;
+    padding: 8px 0;
+    font-weight: 500;
+}
+
+.about-me-intro-skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.intro-skills-item {
+    width: 50%;
+    margin-top: 40px;
+    padding: 0 15px;
+}
+
+.intro-skills-item-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.intro-skills-item-header {
+    font-size: 1.4rem;
+
+}
+
+.intro-skills-item-percent {
+    font-size: 1.2rem;
+    color: var(--title-color);
+}
+
+.intro-skills-item-bar {
+    width: 100%;
+    height: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: var(--progress-bar);
+}
+
+.progress-bar {
+    float: left;
+    height: 100%;
+    background-color: var(--header-color);
+    animation: fadeIn 3s linear forwards;
+}
+
+/* Experience */
+.experience-info-block, .education-info-block {
+    margin-top: 30px;
+}
+
+.experience-info-title, .education-info-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.experience-info-job, .education-info-job {
+    color: var(--title-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+}
+
+.experience-info-description, .education-info-description {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: justify;
+}
+
+/* Contact */
+.contact-block {
+    width: 100%;
+}
+
+.contact-block-require {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-block-element:nth-child(even) {
+    width: 50%;
+    height: 50px;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-block-element:nth-child(odd) {
+    width: 50%;
+    height: 50px;
+    padding-right: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-block-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 1px solid var(--black-color);
+    font-size: 1.4rem;
+    color: var(--title-color);
+    font-weight: 400;
+    caret-color: var(--header-color);
+}
+
+.contact-block-input:focus,
+.contact-block-message:focus {
+    outline: none;
+}
+
+.contact-block-message {
+    margin-bottom: 25px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid var(--black-color);
+    font-size: 1.4rem;
+    color: var(--title-color);
+    font-weight: 400;
+    caret-color: var(--header-color);
+    text-align:start;
+}
+
+.contact-btn {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    line-height: 20px;
+}
+
+.contact-btn:hover {
+    background-color: var(--header-color);
+    cursor: pointer;
+}
