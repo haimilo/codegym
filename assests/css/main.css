@@ -81,7 +81,6 @@
 .nav-bar-item:hover {
     animation: growUp linear .3s forwards;
     will-change: transform;
-    color: var(--header-color);
 }
 
 .nav-bar-item-link {
