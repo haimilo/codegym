@@ -71,9 +71,11 @@ body::-webkit-scrollbar-thumb:hover {
 @keyframes growUp {
     from {
         transform: scale(1);
+        
     }
     to {
         transform: scale(1.05);
+        color: var(--header-color);
     }
 }
 
