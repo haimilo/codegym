@@ -215,6 +215,74 @@
     text-decoration: justify;
 }
 
+/* Works */
+.works-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work-block-item {
+    width: 280px;
+    height: 280px;
+    margin: 10px;
+    padding: 20px;
+    color: var(--white-color);
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.myLadingPage {
+    background-image: url(../img/myLadingPage.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+}
+
+.myTikTok {
+    background-image: url(../img/myTikTok.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+}
+
+.myMusicPlayer {
+    background-image: url(../img/myMusicPlayer.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+}
+
+.myTabUIs {
+    background-image: url(../img/myTabUIs.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+}
+
+.work-block-sub {
+    position: absolute;
+    bottom: 20px;
+    text-decoration: none;
+    color: var(--white-color);
+    text-shadow: 2px 2px var(--primary-color);
+}
+
+.work-block-sub:hover {
+    animation: growUp .3s linear forwards;
+    color: var(--header-color);
+}
+
+.work-block-item-title {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin: 8px 0;
+}
+
 /* Contact */
 .contact-block {
     width: 100%;
