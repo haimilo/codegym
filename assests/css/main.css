@@ -185,7 +185,7 @@
     float: left;
     height: 100%;
     background-color: var(--header-color);
-    animation: fadeIn 3s linear forwards;
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
 /* Experience */
