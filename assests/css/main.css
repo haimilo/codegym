@@ -233,7 +233,7 @@
 }
 
 .myLadingPage {
-    background-image: url('../img/myLadingPage.png');
+    background-image: url("../img/myLadingPage.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -241,7 +241,7 @@
 }
 
 .myTikTok {
-    background-image: url('../img/myTikTok.png');
+    background-image: url("../img/myTikTok.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -249,7 +249,7 @@
 }
 
 .myMusicPlayer {
-    background-image: url('../img/myMusicPlayer.png');
+    background-image: url("../img/myMusicPlayer.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -257,7 +257,7 @@
 }
 
 .myTabUIs {
-    background-image: url('../img/myTabUIs.png');
+    background-image: url("../img/myTabUIs.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
