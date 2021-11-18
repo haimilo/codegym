@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Mô tả
+            Nâng cấp game “Hãy thử đoán xem!”
+
+            1. Thiết kế giao diện: Giao diện chỉ gồm 1 Button “Chơi”: cho phép người dùng bắt đầu chơi hoặc chơi lại
+
+            2. Mô tả ứng dụng: Khi người dùng nhấn vào button “Chơi”:
+
+            Hiển thị cửa sổ prompt cho phép người dùng nhập vào muốn đoán trong khoảng nào (nhập vào số lớn nhất)
+            Chọn ra số ngẫu nhiên trong khoảng mà người dùng chọn
+            Hiển thị cửa số prompt cho người dùng nhập giá trị mà người dùng đoán
+            Lấy kết quả và so sánh với giá trị ngẫu nhiên
+            Nếu bằng thì hiển thị thông báo chúc mừng và kết thúc lượt chơi
+            Nếu lớn hơn hoặc bé hơn thì hiển thị thông báo và cho phép người dùng lựa chọn lại
+            Chú ý: Người dùng chỉ được lựa chọn tối đa ba lần
+     -->
+    <button onClick="playGame()">Chơi</button>
+    <script>
+        function playGame() {
+            let inputRange = prompt('Nhập vào khoảng số đoán: ');
+            let toNumRange = Number(inputRange);
+
+
+            // Tạo số ngẫu nhiên từ 0 đến inputRange
+            let randomNumber = Math.ceil(Math.random() * toNumRange);
+            document.write(randomNumber);
+
+            for (let i = 0; i < 3; i++) {
+                let guestNum = prompt("Nhập vào số bạn muốn đoán: ");
+                let toNumGuest = Number(guestNum);
+                if (randomNumber == toNumGuest) {
+                    alert('Xin chúc mừng bạn đã dự đoán thành công!');
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
