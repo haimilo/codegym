@@ -14,6 +14,14 @@
         for (let i = 0; i < 6; i++) {
             document.write('The number is ', i, '<br>');
         }
+        // Viết chương trình nhập vào một số bất kỳ lớn hơn 0. Tính tổng các phần tử từ 1 đến số vừa nhập vào.
+        let num = prompt('Nhap vao so bat ky > 0:');
+        let total = 0;
+        for (let i = num; i >= 1; i--) {
+            isNum = Number(i);
+            total += isNum;
+        }
+        document.write("Tong cac so tu 1 den ", num, " la: ", total);
     </script>
 </body>
 
