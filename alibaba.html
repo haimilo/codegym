@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Mô tả
+            Giả sử bạn là thủ lĩnh của 40 tên cướp, hãy viết một ứng dụng cho phép nhập câu thần chú để mở cánh cửa hang chứa bí mật mà Ali Baba phát hiện ra
+
+            Mô tả tính năng:
+
+            Nhập vào câu thần chú là mật mã của cánh cửa hang chứa bí mật
+            Nếu nhập sai câu thần chú thì đưa ra thông báo yêu cầu nhập lại
+            Nếu nhập đúng câu thần chú thì dừng vòng lặp và đưa ra thông báo mở cửa thành công
+     -->
+    <script>
+        const pass = "Vung oi mo cua ra";
+        let input;
+        do {
+            input = prompt('Nhap vao cau than chu: ');
+        } while (input != pass)
+        alert('Xin chuc mung ban da nhan duoc kho bau')
+    </script>
+</body>
+
+</html>
