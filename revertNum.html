@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevertNum</title>
+</head>
+
+<body>
+    <input type="text" id="input-block" placeholder="Nhập vào số cần đảo ngược">
+    <br>
+    <button onclick="revertNum()">Đảo ngược số</button>
+    <br>
+    <input type="text" id="result" disabled>
+    <script>
+        function revertNum() {
+            let inputNum = document.getElementById("input-block");
+            let value = inputNum.value;
+            let arrOfValue = value.split('');
+            // Đảo mảng và chuyển thành chuỗi
+            let revertNum = arrOfValue.reverse().join("");
+            let result = document.getElementById("result");
+            result.value = revertNum;
+        }
+    </script>
+</body>
+
+</html>
