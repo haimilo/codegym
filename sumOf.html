@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Mục tiêu
+            Luyện tập sử dụng cấu trúc lặp for.
+
+            Mô tả
+            Trong phần này, chúng ta sẽ phát triển một ứng dụng cho phép tính tổng 
+            các số trong khoảng từ a đến b (bao gồm cả a và b)
+
+            Mô tả tính năng:
+
+            Nhập vào 2 số nguyên a và b
+            In ra màn hình tổng các số trong khoảng từ a đến b
+     -->
+
+    <script>
+        let a = prompt("Nhập a:");
+        a = parseInt(a);
+        temp = a;
+        let b = prompt("Nhập b:");
+        b = parseInt(b);
+        let sum = 0;
+        if (a >= b) {
+            alert("Sai điều kiện hãy nhập a < b");
+        } else {
+            for (a; a <= b; a++) {
+                sum += a;
+            }
+            document.write("Tổng các số [", temp, ";", b, "] là: ", sum);
+        }
+    </script>
+</body>
+
+</html>
