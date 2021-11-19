@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành. -->
+    <script>
+        function countTo100() {
+
+            for (let i = 1; i <= 100; i++) {
+                document.write(i, "<br>");
+                if (i == 99) {
+                    alert("Tại i= " + i + " đã hoàn thành!");
+                }
+            }
+        }
+        countTo100();
+    </script>
+    <!-- Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. 
+        Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. 
+        Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ. -->
+    <script>
+        function checkTemp() {
+            let temp = prompt("Nhập temp:");
+            temp = parseInt(temp);
+            if (temp > 100) {
+                alert("Giảm nhiệt độ");
+            } else if (temp < 20) {
+                alert("Tăng nhiệt độ");
+            } else {
+                alert("Bình thường");
+            }
+        }
+        checkTemp();
+    </script>
+    <!-- Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên. -->
+    <script>
+        function checkFibo() {
+            let a = 1;
+            let b = 0;
+            let tempo = 0;
+            let result = [];
+            for (let i = 0; i < 20; i++) {
+                tempo = a;
+                a = a + b;
+                b = tempo;
+                result.push(b);
+            }
+            document.write(result);
+        }
+        checkFibo();
+    </script>
+    <!-- Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5. -->
+    <script>
+        function checkdiv5() {
+            let a = 1;
+            let b = 0;
+            let temp;
+            for (let i = 0; i < 20; i++) {
+                temp = a;
+                a = a + b;
+                b = temp;
+                if (b % 5 == 0) {
+                    break;
+                }
+            }
+            document.write("<br>Số đầu tiên chia hết cho 5 trong fibo là: ", b);
+        }
+        checkdiv5();
+    </script>
+    <!-- Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci. -->
+    <script>
+        function sumFibo() {
+            let a = 1;
+            let b = 0;
+            let temp;
+            let result = 0;
+            for (let i = 0; i < 20; i++) {
+                temp = a;
+                a = a + b;
+                b = temp;
+                result += b;
+            }
+            document.write("<br>Tổng của 20 số đầu tiên trong dãy fibo là: ", result);
+        }
+        sumFibo();
+    </script>
+    <!-- Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên. -->
+    <script>
+        function fiv7() {
+            let result = 0;
+            let a = 0;
+            let count = 0;
+            while (count < 30) {
+                if (a % 7 == 0) {
+                    result += a;
+                    console.log(a);
+                    a++;
+                    count++;
+                } else {
+                    a++;
+                }
+            }
+            document.write("<br>Tổng của 30 số đầu tiên chia hết cho 7 là: ", result);
+        }
+        fiv7();
+    </script>
+    <!-- Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra “Fizz”, 
+        5 thì in ra “Buzz” thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ “FizzBuzz”. -->
+    <script>
+        function fizzOrBuzz() {
+            let fizz = 0;
+            let buzz = 0;
+            let fizzbuzz = 0;
+            for (let i = 1; i <= 100; i++) {
+                if (i % 3 == 0 && i % 5 == 0) {
+                    document.write("<br>FizzBuzz");
+                    fizzbuzz++;
+                } else if (i % 3 == 0) {
+                    document.write("<br>Fizz");
+                    fizz++;
+                } else if (i % 5 == 0) {
+                    document.write("<br>Buzz");
+                    buzz++;
+                } else {
+                    document.write("<br>", i);
+                }
+            }
+            document.write("<br>Có ", fizz, " số chia hết cho 3 trong dải từ 1 - 100");
+            document.write("<br>Có ", buzz, " số chia hết cho 5 trong dải từ 1 - 100");
+            document.write("<br>Có ", fizzbuzz, " số chia hết cho cả 3 và 5 trong dải từ 1 - 100");
+        }
+        fizzOrBuzz();
+    </script>
+</body>
+
+</html>
