@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="beforeReverse">
+
+    </div>
+    <div class="result">
+
+    </div>
+    <script>
+        let arr = [-3, 5, 1, 3, 2, 10];
+        let render = document.querySelector(".beforeReverse");
+        render.innerHTML = "Mảng chưa đảo chiều là: " + arr;
+        function reverseArr(arr) {
+            let result = arr.reverse();
+            let render = document.querySelector(".result");
+            render.innerHTML = "Mảng đã đảo chiều là: " + result;
+            console.log(result);
+        }
+        reverseArr(arr);
+    </script>
+</body>
+
+</html>
