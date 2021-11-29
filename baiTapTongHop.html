@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bài 1: Cho 1 mảng các số ngẫu nhiên, tính tổng các số chẵn trong mảng?
+            Bài 2: Nhập vào số năm là yyyy, xác định xem năm đó có phải năm nhuận hay không?
+            Bài 3: Cho 1 mảng các số bao gồm cả nguyên âm và nguyên dương, tính trung bình cộng các số nguyên dương trong mảng.
+            Bài 4: Nhập vào 1 số n, xác định xem số đó có phải số trong trong dãy fibonacci hay không?
+            Bài 5: Cho mảng hoa quả:
+            fruits = [“Đào”,”Cóc”,”Ổi”,”Chanh”]
+            - Viết chương trình hiển thị ra danh sách các loại quả
+            -Có nút thêm 1 loại quả vào danh sách và hiển thị lại
+ -->
+    <script>
+        // Bài 1:
+        let nums = [1, 2, 4, 6, 8];
+        function sumOfEven(nums) {
+            let sum = 0;
+            for (let i = 0; i < nums.length; i++) {
+                if (nums[i] % 2 == 0) {
+                    sum += nums[i];
+
+                } else {
+                    continue;
+                }
+            }
+            console.log(sum);
+        }
+        sumOfEven(nums);
+        // Bài 2: Nhập vào số năm là yyyy, xác định xem năm đó có phải năm nhuận hay không?
+        let year = parseInt(prompt("Nhập vào năm: "));
+        function isYear(year) {
+            year % 4 == 0 ? console.log("Đây là năm nhuận!") : console.log("Đây không phải năm nhuận!");
+        }
+        isYear(year);
+        //   Bài 3: Cho 1 mảng các số bao gồm cả nguyên âm và nguyên dương, tính trung bình cộng các số nguyên dương trong mảng.
+        let newNums = [1, 3, 4, 10, -1, -2, -3, -4, -5, -6];
+        function avgNum(newNums) {
+            let avg = 0;
+            let countPos = 0;
+            for (let i = 0; i < newNums.length; i++) {
+                if (newNums[i] > 0) {
+                    avg += newNums[i];
+                    countPos++;
+                }
+            }
+            avg = avg / (countPos);
+            console.log(avg);
+        }
+        avgNum(newNums);
+        //  Bài 4: Nhập vào 1 số n, xác định xem số đó có phải số trong trong dãy fibonacci hay không?
+        let num = parseInt(prompt('Nhập vào số n: '));
+        function isFibo(num) {
+            let tmpArr = [];
+            let a = 1;
+            let b = 0;
+            let temp;
+            while (b <= num) {
+                temp = a;
+                a = a + b;
+                b = temp;
+                tmpArr.push(b);
+                // if (b == num) {
+                //     console.log('Đây là số trong dãy fibo!');
+                // } else {
+                //     continue;
+                // }
+            }
+            tmpArr.includes(num) == true ? console.log("Đây là số trong dãy fibo!") : console.log("Đây không phải số trong dãy fibo!");
+        }
+        isFibo(num);
+
+    </script>
+</body>
+
+</html>
