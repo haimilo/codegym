@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="addFruit()"">Add New Fruit</button>
+    <div class=" display-fruit">
+
+        </div>
+
+        <script>
+            /*
+              Bài 5: Cho mảng hoa quả:
+                  fruits = [“Đào”,”Cóc”,”Ổi”,”Chanh”]
+                  - Viết chương trình hiển thị ra danh sách các loại quả
+                  -Có nút thêm 1 loại quả vào danh sách và hiển thị lại
+              */
+            let fruits = ["Đào", "Cóc", "Ổi", "Chanh"];
+            let divRender = document.querySelector(".display-fruit");
+
+            renderFruit();
+
+            function addFruit() {
+                let newFruit = prompt("Nhập vào loại quả muốn thêm: ");
+                fruits.push(newFruit);
+                console.log(fruits);
+                renderFruit();
+            }
+
+            function renderFruit() {
+                divRender.innerHTML = fruits;
+            }
+        </script>
+</body>
+
+</html>
