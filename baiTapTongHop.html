@@ -34,7 +34,7 @@
         // Bài 2: Nhập vào số năm là yyyy, xác định xem năm đó có phải năm nhuận hay không?
         let year = parseInt(prompt("Nhập vào năm: "));
         function isYear(year) {
-            year % 4 == 0 ? console.log("Đây là năm nhuận!") : console.log("Đây không phải năm nhuận!");
+            (year % 4 == 0 && year % 400 ==0) ? console.log("Đây là năm nhuận!") : console.log("Đây không phải năm nhuận!");
         }
         isYear(year);
         //   Bài 3: Cho 1 mảng các số bao gồm cả nguyên âm và nguyên dương, tính trung bình cộng các số nguyên dương trong mảng.
