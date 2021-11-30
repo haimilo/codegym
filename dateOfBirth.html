@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="birtOfDate()">Enter</button>
+    <br>
+    <div class="birthElement">
+
+    </div>
+    <script>
+        function birtOfDate() {
+            let date = prompt("Nhập vào ngày sinh của bạn: ");
+            let month = prompt("Nhập vào tháng sinh của bạn: ");
+            let year = prompt("Nhập vào năm sinh cảu bạn: ");
+            let html = "";
+            html = date + "/" + month + "/" + year;
+            console.log(html);
+            let result = document.querySelector(".birthElement");
+            result.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>
