@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="calcCircle();">calcCircle</button>
+    <div class="circle-Element">
+        Chu vi hình tròn là:
+        <div class="circle-chu-vi">
+
+        </div>
+        Diện tích hình tròn là:
+        <div class="circle-dien-tich">
+
+        </div>
+    </div>
+    <script>
+        function calcCircle() {
+            let p = 0;
+            let s = 0;
+            let pi = Math.PI;
+            pi = pi.toFixed(2);
+            let r = prompt("Nhập vào bán kính đường tròn");
+            p = 2 * pi * r;
+            s = pi * r * r;
+            let chuVi = document.querySelector(".circle-chu-vi");
+            let dienTich = document.querySelector(".circle-dien-tich");
+            chuVi.innerHTML = p;
+            dienTich.innerHTML = s;
+        }
+    </script>
+</body>
+
+</html>
