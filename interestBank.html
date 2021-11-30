@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Mô tả
+    Viết chương trình JavaScript tính lãi suất ngân hàng theo công thức tính lãi đơn. Đầu vào là số tiền vay, lãi suất,
+    số
+    năm ( n ). Sau đó hiển thị kết quả của số tiền phải trả sau n năm.
+
+    Khái niệm lãi đơn: Lãi được tính theo tỉ lệ phần trăm trong một khoảng thời gian cố định trước.
+
+    Ví dụ: Khi ta gửi tiết kiệm 50 (triệu đồng) vào một ngân hàng với lãi suất 6,9% /năm thì sau một năm ta nhận được số
+    tiền lãi là: 50 * 6,9% = 3,45 (triệu đồng)
+
+    Số tiền lãi này như nhau được cộng vào hàng năm. Kiểu tính lãi này được gọi là lãi đơn.
+    Sau hai năm số tiền cả gốc lẫn lãi là: 50 + 2 * 3,45 = 56,9 (triệu đồng)
+    Sau n năm số tiền cả gốc lẫn lãi là: 50 + n * 3,45 (triệu đồng) -->
+    <button onclick="interestOfBank()">calcInterest</button>
+    <div class="boxElement">
+
+    </div>
+    <script>
+        function interestOfBank() {
+            let tienVay = parseInt(prompt("Nhập vào số tiền muốn vay: "));
+            let interest = 5;
+            let stringInterest = interest + "%";
+            let numOfYear = parseInt(prompt("Nhập vào số năm bạn muốn vay: "));
+            alert("Lãi suất hàng năm của bạn là: " + stringInterest);
+            let result = tienVay + ((interest * tienVay) / 100);
+            let check = document.querySelector(".boxElement");
+            check.innerHTML = "Số tiền phải trả sau " + numOfYear + " là: " + result + " VNĐ";
+        }
+    </script>
+</body>
+
+</html>
