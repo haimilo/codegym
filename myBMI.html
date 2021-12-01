@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Mục tiêu
+        Luyện tập sử dụng cấu trúc điều khiển if.
+
+        Mô tả
+        BMI (Body mass index) là một thước đo về sự mập ốm của một người dựa trên cân nặng và chiều cao. 
+        Nó được tính bằng cách lấy cân nặng đơn vị tính kilogam chia cho bình phương của chiều cao đơn vị 
+        tính mét. Công thức:
+
+        bmi = cân_nặng / ( chiều_cao ^ 2 )
+        Chỉ số BMI đối với người trên 20 tuổi được phân loại và diễn giải theo bảng sau:
+
+        BMI <16: Gầy độ III
+        16 ≤ BMI < 17: Gầy độ II
+        17 ≤ BMI < 18.5: Gầy độ I
+        18.5 ≤ BMI < 25: Bình thường
+        25 ≤ BMI < 30: Thừa cân
+        30 ≤ BMI < 35: Béo phì độ 1
+        35 ≤ BMI < 40: Béo phì độ II
+        BMI > 40: Béo phì độ III
+
+        Ví dụ: Một người có cân nặng là 65Kg và chiều cao là 1.75m thì BMI là 65 / 1.752 = 22.22. 
+        Chỉ số này nằm trong khoảng 18.5 đến 25.0 cho nên được phân loại là “Bình thường”. -->
+        <input id="height" type="text" placeholder="Nhập vào chiều cao của bạn"> cm
+        <br>
+        <input id="weight" type="text" placeholder="Nhập vào cân nặng của bạn"> kg
+        <br>
+        <button onclick="checkBMI()">Check BMI</button>
+        <br>
+        <span>Kết quả:</span> <br>
+        <input id="result" type="text" disabled>
+        <input type="text"  id="bmi-result" disabled>
+    <script>
+
+        function checkBMI() {
+            let height = parseInt(document.querySelector("#height").value);
+            let weight = parseInt(document.querySelector("#weight").value);
+            let bmi = weight / (height * height);
+            bmi = bmi * 10000;
+            console.log(bmi);
+            let result = document.querySelector("#result");
+            let bmiResult = document.querySelector("#bmi-result");
+            let myResult = "";
+            if (bmi < 16) {
+                myResult = "Gầy độ III";
+            } else if (bmi >= 16 && bmi < 17) {
+                myResult = "Gầy độ II";
+            } else if (bmi >= 17 && bmi < 18.5) {
+                myResult = "Gầy độ I";
+            } else if (bmi >= 18.5 && bmi < 25) {
+                myResult = "Bình thường";
+            } else if (bmi >= 25 && bmi < 30) {
+                myResult = "Thừa cân";
+            } else if (bmi >= 30 && bmi < 35) {
+                myResult = "Béo phì độ I";
+            } else if (bmi >= 35 && bmi < 40) {
+                myResult = "Béo phì độ II";
+            } else if (bmi >= 40) {
+                myResult = "Béo phì độ III";
+            }
+            result.value = myResult;
+            bmiResult.value = bmi.toFixed(2);
+        }
+    </script>
+</body>
+</html>
