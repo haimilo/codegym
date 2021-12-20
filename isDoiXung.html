@@ -10,29 +10,17 @@
 
 <body>
     <script>
-        function isPalindrome(s) {
-            if (s.length % 2 != 0) {
-                return (console.log("Đây là chuỗi k đối xứng"))
-            }
-            checkDoiXung(s);
-        }
-        function checkDoiXung(string) {
-            // Chuyển chuỗi về mảng
-            let arr = string.split("");
-            let newArr = [];
-            // Lặp qua mảng arr
-            for (let i = 0; i < arr.length; i++) {
-                if (arr[i] != arr[length - 1]) {
-                    return (console.log("Đây là chuỗi k đối xứng"))
-                } else {
-                    arr.pop();
-                    arr.shift();
+        function isPallidome(inputString) {
+            let n = inputString.length;;
+            for (let i = 0; i < (n / 2); i++) {
+                if (inputString[i] != inputString[n - i - 1]) {
+                    return (console.log(inputString + " k phải là chuỗi đối xứng"));
                 }
             }
-            return (console.log("Đây là chuỗi đối xứng"))
+            return (console.log(inputString + " là chuỗi đối xứng"));
         }
-        let s = 'abba';
-        isPalindrome(s);
+        isPallidome("abba");
+        isPallidome("aabb");
     </script>
 </body>
 
